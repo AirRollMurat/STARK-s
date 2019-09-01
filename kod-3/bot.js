@@ -1,5 +1,5 @@
 client.on("message", async message => {
-  
+  const ms = require('parse-ms');
   if(message.author.bot) return;
   if(!message.guild) return;
   if(message.content.includes(`${prefix}afk`)) return;
