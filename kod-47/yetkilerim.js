@@ -15,29 +15,32 @@ let x;
     let x9;
     let x10;
     let x11;
+
+    var tik = `${client.emojis.get("617640062108303391")}`
+    var cross = `${client.emojis.get("617640062275944449")}`
     
-    if (msg.member.hasPermission("ADMINISTRATOR")) x = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("ADMINISTRATOR")) x = `<:s_:617640062275944449> `
-    if (msg.member.hasPermission("VIEW_AUDIT_LOG")) x2 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("VIEW_AUDIT_LOG")) x2 = `<:s_:617640062275944449>`
-    if (msg.member.hasPermission("MANAGE_GUILD")) x3 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_GUILD")) x3 = `<:s_:617640062275944449> `   
-    if (msg.member.hasPermission("MANAGE_ROLES")) x4 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_ROLES")) x4 = `<:s_:617640062275944449> `
-    if (msg.member.hasPermission("MANAGE_CHANNELS")) x5 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_CHANNELS")) x5 = `<:s_:617640062275944449> `
-    if (msg.member.hasPermission("KICK_MEMBERS")) x6 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("KICK_MEMBERS")) x6 = `<:s_:617640062275944449> `
-    if (msg.member.hasPermission("BAN_MEMBERS")) x7 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("BAN_MEMBERS")) x7 = `<:s_:617640062275944449> `
-    if (msg.member.hasPermission("MANAGE_MESSAGES")) x8 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_MESSAGES")) x8 = `<:s_:617640062275944449> `
-    if (msg.member.hasPermission("MANAGE_NICKNAMES")) x9 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_NICKNAMES")) x9 = `<:s_:617640062275944449> ` 
-    if (msg.member.hasPermission("MANAGE_EMOJIS")) x10 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_EMOJIS")) x10 = `<:s_:617640062275944449> `   
-    if (msg.member.hasPermission("MANAGE_WEBHOOKS")) x11 = `<:ss:617640062108303391> `
-    if (!msg.member.hasPermission("MANAGE_WEBHOOKS")) x11 = `<:s_:617640062275944449> `
+    if (msg.member.hasPermission("ADMINISTRATOR")) x = `${tik} `
+    if (!msg.member.hasPermission("ADMINISTRATOR")) x = `${cross} `
+    if (msg.member.hasPermission("VIEW_AUDIT_LOG")) x2 = `${tik} `
+    if (!msg.member.hasPermission("VIEW_AUDIT_LOG")) x2 = `${cross} `
+    if (msg.member.hasPermission("MANAGE_GUILD")) x3 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_GUILD")) x3 = `${cross} `   
+    if (msg.member.hasPermission("MANAGE_ROLES")) x4 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_ROLES")) x4 = `${cross} `
+    if (msg.member.hasPermission("MANAGE_CHANNELS")) x5 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_CHANNELS")) x5 = `${cross} `
+    if (msg.member.hasPermission("KICK_MEMBERS")) x6 = `${tik} `
+    if (!msg.member.hasPermission("KICK_MEMBERS")) x6 = `${cross} `
+    if (msg.member.hasPermission("BAN_MEMBERS")) x7 = `${tik} `
+    if (!msg.member.hasPermission("BAN_MEMBERS")) x7 = `${cross} `
+    if (msg.member.hasPermission("MANAGE_MESSAGES")) x8 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_MESSAGES")) x8 = `${cross} `
+    if (msg.member.hasPermission("MANAGE_NICKNAMES")) x9 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_NICKNAMES")) x9 = `${cross} ` 
+    if (msg.member.hasPermission("MANAGE_EMOJIS")) x10 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_EMOJIS")) x10 = `${cross} `   
+    if (msg.member.hasPermission("MANAGE_WEBHOOKS")) x11 = `${tik} `
+    if (!msg.member.hasPermission("MANAGE_WEBHOOKS")) x11 = `${cross} `
     
     const embed = new Discord.RichEmbed()
     .setColor('RED')
@@ -50,8 +53,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['izinlerim'],
-  permLevel: 0,
-    kategori: "kullanıcı"
+  permLevel: 0
 };
 
 exports.help = {
