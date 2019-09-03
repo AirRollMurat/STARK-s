@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-var Jimp = require('jimp');
 const request = require('request');
 var mcPort = 25565
 var ayarlar = require('../ayarlar.json')
@@ -87,10 +86,7 @@ exports.run = async (client, message, args) => {
  
 }
   
-    if (!args[0]) return message.channel.send('<a:h_:591907035553988638> Lütfen bilgisini almak istedediğiniz işlemi yazın; işlemler ``kafa``,``skin``,``vücut``,``avatar``,``sunucu`` şeklinde olmalıdır; ``!!minecraft kafa AykutcanK``');
-    if (args[0] > 8) return message.channel.send('<a:h_:591907035553988638> Lütfen bilgisini almak istedediğiniz işlemi yazın; işlemler ``kafa``,``skin``,``vücut``,``avatar``,``sunucu`` şeklinde olmalıdır; ``!!minecraft kafa AykutcanK``');
-  
-  
+    if (!args[0]) return message.channel.send('Lütfen bilgisini almak istedediğiniz işlemi yazın; işlemler ``kafa``,``skin``,``vücut``,``avatar``,``sunucu`` şeklinde olmalıdır; ``!!minecraft kafa AykutcanK``');  
   
 }
 exports.conf = {
@@ -103,6 +99,6 @@ exports.conf = {
   
   exports.help = {
     name: 'minecraft',
-    description: 'Bütün minecraft kodları.',
+    description: 'Avatariniza Balance Efekti Ekler.',
     usage: 'minecraft <rakam>'
   };
