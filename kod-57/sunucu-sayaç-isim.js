@@ -1,4 +1,5 @@
 ////Sunucu İsim
+const sunucu = "sunucu id"
 //Giriş
 client.on('guildMemberAdd', member => {
   var t = client.guilds.get(sunucu)
