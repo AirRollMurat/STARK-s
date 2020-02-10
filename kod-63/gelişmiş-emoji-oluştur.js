@@ -3,9 +3,9 @@ const prefix = "!"
 exports.run = async (stark, msg, args) => {
      let emoji_isim = args[0]
      let emoji_url = args[1]
-if(emoji_isim) {
+if(emoji_isim) { 
   if(!emoji_url) return msg.reply("Emoji dosyasını yükleyin ya da bağlantısını gönderin.\n Yada sadece `"+prefix+"emojio` yazıp bekleyin.")
-     msg.guild.createEmoji(emoji_url, emoji_isim, null )
+     msg.guild.createEmoji(emoji_url.content, emoji_isim, null )
      .then(emoji => {
         return msg.channel.send(`\`${emoji.name}\`(${emoji}) adlı emoji başarıyla oluşturuldu`)
      })
