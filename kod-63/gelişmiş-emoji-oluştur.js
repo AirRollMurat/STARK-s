@@ -40,7 +40,12 @@ if(!emoji_isim) {
      .then(emoji => {
         return msg.channel.send(`\`${emoji.name}\`(<:${emoji.name}:${emoji.id}>) adlı emoji başarıyla oluşturuldu`)
      }).catch((err) => {
-         msg.channel.send(`:x: Hata \n ${err}`)
+         msg.channel.send(` Bir hata oluştu. Lütfen;\n
+- Yazdığınız adın içinde Türkçe bir karakter bulunmadığına,\n
+- Sunucuda emoji yüklemek için yer olduğuna,\n 
+- Koyduğunuz dosyanın bir resim olduğuna,\n
+- Emojinin 256kb boyutundan küçük olduğuna,\n
+ emin olun ve tekrar deneyin.`)
        })
   console.log(b.attachments)
   }
