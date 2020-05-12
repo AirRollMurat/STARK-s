@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'top10',
+  name: 'top10',
   run: async(stark, msg, args) => {
     const { table } = require("table");
     const { MessageEmbed } = require("discord.js");
