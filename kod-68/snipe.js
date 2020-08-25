@@ -26,5 +26,5 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'Komutunuzun Kullanım Anahtarı İsmi'
+  name: 'snipe'
 }
