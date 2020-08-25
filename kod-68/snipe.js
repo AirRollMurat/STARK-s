@@ -9,10 +9,11 @@ exports.run = function(client, message, args) {
             .setAuthor(msg.author.username, msg.author.avatarURL({ dynamic: true }))
             .setTimestamp();
 
-        if (!snipes.get(`servers.${msg.guild.id}.${msg.channel.id}`)) return msg.channel.send(embed.setDescription("**Veri bulunamadı.**"))
-
+        if (!snipes.get(`servers.${msg.guild.id}.${msg.channel.id}`)) return msg.channel.send(embed.setDescription("**Veri bulunamadı.**"));
+ 
+        embed.setDescription(`${msg.channel.toString()} kanalında en son silinen 5 mesaj;`)
+        
         snipes.get(`servers.${msg.guild.id}.${msg.channel.id}`).map((y, index) => {
-            embed.setDescription(`${msg.channel.toString()} kanalında en son silinen 5 mesaj;`)
             embed.addField(y.writer, `${y.content ? y.content + " - " : ""}${Time(y.deletedAt)}${y.image ? ` - [Dosya](${y.image})` : ""}`)
         });
 
